@@ -1,0 +1,29 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+}
+
+.fuzzy-overlay {
+  position: absolute;
+  inset: -200%;
+  background-image: url("analog-noise.webp");
+  opacity: 4%;
+  background-size: 200px;
+  background-repeat: repeat;
+
+  animation: shift .2s linear infinite both;
+}
+
+@keyframes shift {
+  0% {
+    transform: translateX(10%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-10%) translateY(-10%);
+  }
+}
+
